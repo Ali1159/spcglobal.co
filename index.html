@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sadiq Public Chemicals — Haripur, Pakistan. Established in 1975. Official business information and government procurement contact details.">
+  <title>Sadiq Public Chemicals | Haripur, Pakistan</title>
+  <style>
+    :root{
+      --blue:#216784;
+      --blue-dark:#0d3041;
+      --red:#c9282d;
+      --ink:#13232d;
+      --muted:#63727b;
+      --bg:#f5f8fa;
+      --line:#dfe7eb;
+      --white:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1180px,92%);margin:auto}
+    nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(13,48,65,.09)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--blue-dark)}
+    .brand img{width:54px;height:54px;object-fit:contain}
+    .brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:1.2px;text-transform:uppercase}
+    .links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700;color:#40515b}
+    .links a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:7px;font-weight:800;font-size:14px}
+    .btn-red{background:var(--red);color:white}
+    .btn-blue{background:var(--blue);color:white}
+    .menu{display:none;font-size:25px;cursor:pointer}
+    .hero{padding:150px 0 95px;background:linear-gradient(120deg,#f8fbfc 0%,#edf4f7 58%,#fff 100%);position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:620px;height:620px;border:1px solid rgba(33,103,132,.13);border-radius:50%;right:-230px;top:30px;box-shadow:0 0 0 55px rgba(33,103,132,.025),0 0 0 110px rgba(33,103,132,.018)}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:70px;align-items:center;position:relative;z-index:1}
+    .eyebrow{color:var(--red);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1.8px;margin-bottom:18px}
+    h1{font-size:clamp(44px,6.5vw,76px);line-height:1.02;letter-spacing:-3px;color:var(--blue-dark);margin-bottom:22px}
+    h1 span{color:var(--red)}
+    .lead{font-size:18px;color:var(--muted);max-width:650px;margin-bottom:30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-logo{display:flex;justify-content:center;align-items:center}
+    .hero-logo img{width:min(410px,82%);filter:drop-shadow(0 20px 30px rgba(13,48,65,.12))}
+    .facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:white}
+    .facts-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .fact{padding:25px 28px;border-right:1px solid var(--line)}
+    .fact:last-child{border:0}
+    .fact b{display:block;color:var(--red);font-size:12px;letter-spacing:1.2px;text-transform:uppercase}
+    .fact strong{display:block;color:var(--blue-dark);font-size:18px;margin-top:3px}
+    section{padding:92px 0}
+    .label{color:var(--red);font-size:12px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:12px}
+    h2{font-size:clamp(32px,4.5vw,50px);line-height:1.08;letter-spacing:-1.6px;color:var(--blue-dark);margin-bottom:17px}
+    .sub{color:var(--muted);max-width:700px}
+    .about{background:var(--bg)}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+    .copy p{color:var(--muted);margin-bottom:17px}
+    .card{background:var(--blue-dark);color:white;border-radius:18px;padding:40px;box-shadow:0 22px 50px rgba(13,48,65,.13)}
+    .card .mini{color:#9fd0df;text-transform:uppercase;font-weight:900;letter-spacing:1.5px;font-size:11px}
+    .card h3{font-size:29px;line-height:1.15;margin:14px 0}
+    .card p{color:rgba(255,255,255,.68)}
+    .notice{margin-top:25px;border-left:3px solid var(--red);padding:15px 18px;background:white;color:var(--muted);font-size:14px}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+    .service{border:1px solid var(--line);border-radius:12px;padding:28px;background:white}
+    .service .num{color:var(--red);font-weight:900;font-size:12px}
+    .service h3{margin:25px 0 7px;color:var(--blue-dark);font-size:19px}
+    .service p{color:var(--muted);font-size:14px}
+    .compliance{background:var(--blue-dark);color:white}
+    .compliance h2{color:white}
+    .compliance .sub{color:rgba(255,255,255,.62)}
+    .compliance-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+    .rule{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);border-radius:11px;padding:25px}
+    .rule b{display:block;color:#9fd0df;margin-bottom:7px}
+    .rule span{color:rgba(255,255,255,.62);font-size:14px}
+    .contact{background:var(--bg)}
+    .contact-box{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;background:white;border:1px solid var(--line);border-radius:18px;padding:48px;box-shadow:0 18px 45px rgba(13,48,65,.07)}
+    .details{display:grid;gap:18px}
+    .detail{display:flex;gap:14px}
+    .icon{width:38px;height:38px;border-radius:8px;background:#edf5f7;color:var(--blue);display:grid;place-items:center;font-weight:900;flex:0 0 38px}
+    .detail small{display:block;color:#87959d;text-transform:uppercase;letter-spacing:1px;font-size:10px;font-weight:900}
+    .detail strong{display:block;color:var(--blue-dark);font-size:14px}
+    footer{background:#071b25;color:rgba(255,255,255,.55);padding:26px 0;font-size:12px}
+    .footer{display:flex;justify-content:space-between;gap:20px}
+    .footer b{color:white}
+
+    .whatsapp-float{
+      position:fixed;right:24px;bottom:24px;z-index:50;
+      display:flex;align-items:center;gap:10px;padding:13px 18px;
+      border-radius:999px;background:#25D366;color:#fff;
+      font-size:14px;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.18);
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 16px 35px rgba(0,0,0,.24)}
+    .whatsapp-icon{
+      width:25px;height:25px;border:2px solid rgba(255,255,255,.95);
+      border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:900;
+    }
+
+    @media(max-width:850px){
+      .links{display:none;position:absolute;top:78px;left:0;right:0;padding:22px;background:white;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
+      .links.open{display:flex}.menu{display:block}
+      .hero-grid,.two,.contact-box{grid-template-columns:1fr}
+      .hero-logo{order:-1}.hero-logo img{width:250px}
+      .facts-grid{grid-template-columns:1fr}.fact{border-right:0;border-bottom:1px solid var(--line)}
+      .services-grid,.compliance-grid{grid-template-columns:1fr}
+      .contact-box{padding:30px}
+    }
+    @media(max-width:520px){
+      section{padding:70px 0}
+      .actions{flex-direction:column}.btn{width:100%}
+      .footer{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <img src="logo.png" alt="Sadiq Public Chemicals logo">
+      <div>Sadiq Public Chemicals<small>Haripur, Pakistan</small></div>
+    </a>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#services">Business</a>
+      <a href="#compliance">Procurement</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-red" href="#contact">Contact Us</a>
+    </div>
+    <div class="menu" onclick="document.getElementById('links').classList.toggle('open')">☰</div>
+  </div>
+</nav>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Established 1975 · Haripur, Pakistan · German-sourced chemicals</div>
+        <h1>Sadiq Public <span>Chemicals</span></h1>
+        <p class="lead">
+          Based in Haripur, Pakistan, Sadiq Public Chemicals supplies selected chemical products sourced from Germany for authorized institutional procurement requirements.
+        </p>
+        <div class="actions">
+          <a class="btn btn-red" href="#contact">Contact the Office</a>
+          <a class="btn btn-blue" href="#compliance">Procurement Information</a>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <img src="logo.png" alt="Sadiq Public Chemicals — Since 1975">
+      </div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap facts-grid">
+      <div class="fact"><b>Established</b><strong>Since 1975</strong></div>
+      <div class="fact"><b>Location</b><strong>Haripur, Pakistan</strong></div>
+      <div class="fact"><b>Source</b><strong>Selected chemicals from Germany</strong></div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap two">
+      <div class="copy">
+        <div class="label">About Sadiq Public Chemicals</div>
+        <h2>A long-established name in Haripur.</h2>
+        <p>
+          Sadiq Public Chemicals identifies its business as a chemical supplier based in Haripur, Khyber Pakhtunkhwa, with the company logo carrying the “Since 1975” mark. The supplied company material also describes imported chemical products sourced from Germany.
+        </p>
+        <p>
+          The supplied business notice states that orders are handled only for specified government or government-authorized institutional bodies. The company is located in Haripur, while the supplied material identifies Germany as a source of imported chemical products.
+        </p>
+        <div class="notice">
+          Private and non-governmental orders are not accepted according to the
+          supplied company notice.
+        </div>
+      </div>
+      <div class="card">
+        <div class="mini">Company profile</div>
+        <h3>Direct handling of institutional orders.</h3>
+        <p>
+          The supplied notice states that owners are directly managing orders
+          and provides dedicated contact channels for procurement enquiries.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="label">Business Information</div>
+      <h2>Built around documented procurement.</h2>
+      <p class="sub">
+        The information below is limited to what is supported by the supplied
+        company material, without adding unverified product claims.
+      </p>
+
+      <div class="services-grid">
+        <article class="service">
+          <div class="num">01</div>
+          <h3>Institutional Supply</h3>
+          <p>Orders are described as being limited to specified government or government-authorized bodies.</p>
+        </article>
+        <article class="service">
+          <div class="num">02</div>
+          <h3>Documentation</h3>
+          <p>Written requests, institutional identification and supporting authorization are described as part of the ordering process.</p>
+        </article>
+        <article class="service">
+          <div class="num">03</div>
+          <h3>Government Rabies-Control Bodies</h3>
+          <p>The supplied notice specifically identifies government health and municipal bodies involved in rabies-control work.</p>
+        </article>
+        <article class="service">
+          <div class="num">04</div>
+          <h3>Direct Contact</h3>
+          <p>Customers are instructed to use the company telephone numbers supplied on the business notice for enquiries.</p>
+        </article>
+        <article class="service">
+          <div class="num">05</div>
+          <h3>Payment Verification</h3>
+          <p>The supplied material describes payment and account-verification requirements before institutional orders are processed.</p>
+        </article>
+        <article class="service">
+          <div class="num">06</div>
+          <h3>Haripur Office</h3>
+          <p>The supplied address places the business at Mother Care Hospital Building, near Alfalah Bank, G.T. Road, Haripur.</p>
+        </article>
+        <article class="service">
+          <div class="num">07</div>
+          <h3>German Sourcing</h3>
+          <p>Selected chemical products supplied by the business are sourced/imported from Germany, while the company's operating location is in Haripur, Pakistan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="compliance" id="compliance">
+    <div class="wrap">
+      <div class="label" style="color:#9fd0df">Procurement Notice</div>
+      <h2>Institutional ordering requirements.</h2>
+      <p class="sub">
+        These points summarize the supplied company notice. They are presented
+        as company-stated requirements and should be confirmed directly with
+        the office before any transaction.
+      </p>
+
+      <div class="compliance-grid">
+        <div class="rule"><b>Eligible purchasers</b><span>Tehsil Municipal Committees, Town Committees, District Councils, Army Cantonment Boards and government health-regulating bodies are identified.</span></div>
+        <div class="rule"><b>Written request</b><span>The supplied material requires a written institutional request with appropriate endorsement.</span></div>
+        <div class="rule"><b>Authorization</b><span>A recommendation/confirmation from the relevant district authority is described in the supplied notice.</span></div>
+        <div class="rule"><b>Institutional details</b><span>The notice asks purchasers to provide official address and district information, together with relevant identification details.</span></div>
+        <div class="rule"><b>Contractor clarification</b><span>The supplied notice states that Sadiq Public Chemicals has no connection with government or semi-government contractors.</span></div>
+        <div class="rule"><b>Safety & responsibility</b><span>Use and handling of any chemical product must follow applicable official instructions, safety documentation and law.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-box">
+      <div>
+        <div class="label">Contact</div>
+        <h2>Speak with Sadiq Public Chemicals.</h2>
+        <p style="font-weight:800;color:var(--blue-dark);margin-top:-8px;margin-bottom:8px;">
+          Primary contact: 0335-6195050
+        </p>
+        <p class="sub">
+          For institutional procurement enquiries, contact the office directly
+          using the telephone numbers provided in the supplied company notice.
+        </p>
+        <br>
+        <a class="btn btn-red" href="tel:+923356195050">Call 0335-6195050</a>
+      </div>
+
+      <div class="details">
+        <div class="detail">
+          <div class="icon">☎</div>
+          <div><small>Primary Phone / WhatsApp</small><strong>0335-6195050</strong></div>
+        </div>
+        <div class="detail">
+          <div class="icon">☎</div>
+          <div><small>Phone</small><strong>0335-6195050</strong></div>
+        </div>
+        <div class="detail">
+          <div class="icon">☎</div>
+          <div><small>Phone</small><strong>0995-614444</strong></div>
+        </div>
+        <div class="detail">
+          <div class="icon">⌖</div>
+          <div><small>Address</small><strong>Mother Care Hospital Building, Near Alfalah Bank, G.T. Road, Haripur</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<a class="whatsapp-float"
+   href="https://wa.me/923356195050?text=Hello%20Sadiq%20Public%20Chemicals%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Contact Sadiq Public Chemicals on WhatsApp">
+  <span class="whatsapp-icon">WA</span>
+  WhatsApp Us
+</a>
+
+<footer>
+  <div class="wrap footer">
+    <div><b>Sadiq Public Chemicals</b> · Haripur, Pakistan</div>
+    <div>© <span id="year"></span> Sadiq Public Chemicals</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelectorAll("#links a").forEach(a =>
+    a.addEventListener("click", () => document.getElementById("links").classList.remove("open"))
+  );
+</script>
+</body>
+</html>
